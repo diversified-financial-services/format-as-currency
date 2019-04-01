@@ -108,7 +108,8 @@ angular
         // ignore non-numeric characters
         value = value.replace(/[a-zA-Z!\?>:;\|<@#%\^&\*\)\(\+\/\\={}\[\]_]/g, '')
 
-        var number = (Math.floor(util.toFloat(value) * 100) / 100).toFixed(2)
+        // LINE WHERE ORIGINAL SOURCE CODE ADJUSTED
+        var number = util.toFloat(value).toFixed(2)
 
         if (ngModel.$validators.currency(number)) {
 

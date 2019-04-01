@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "karma start; karma run; gulp coveralls",
-    "pretest": "bower install && npm install",
+    "test": "karma start",
+    "pretest": "npm install && bower install",
     "prepublish": "npm run build-browserify",
     "build-browserify": "browserify -s formatAsCurrency -u angular -t browserify-shim ./src/format-as-currency.js > ./dist/format-as-currency.js"
   },
@@ -45,9 +45,9 @@
     "gulp-coveralls": "^0.1.4",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.10",
-    "karma-chrome-launcher": "^0.2.1",
+    "karma-chrome-launcher": "^0.2.3",
     "karma-coverage": "^0.5.2",
-    "karma-jasmine": "^0.3.6"
+    "karma-jasmine": "^0.3.8"
   },
   "browserify-shim": {
     "angular": "global:angular"
